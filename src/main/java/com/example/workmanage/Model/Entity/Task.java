@@ -14,6 +14,7 @@ import java.util.Date;
 @AllArgsConstructor
 @Entity
 @NoArgsConstructor
+@Embeddable
 @Table(name = "task")
 public class Task {
     @Id
@@ -37,9 +38,13 @@ public class Task {
     private String taskStatus;
 
     @Column(name = "priority_task")
-    private boolean taskPriority;
+    private boolean taskPriority = false;
 
     @Column(name = "repeat_task")
-    private boolean repeat;
+    private boolean repeat = false;
+
+    @ManyToOne
+    private  User user;
+
 
 }

@@ -1,4 +1,4 @@
-package com.example.workmanage.Model.ReqDto;
+package com.example.workmanage.Model.ResDto.Task;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,12 +9,13 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class AddTaskReqDto {
+public class SearchTaskResDto {
+    private String taskId;
     private String taskName;
     private String taskDiscription;
-    private Date startDate;
-    private Date endDate;
+    private String startDate;
+    private String endDate;
     private String taskStatus;
-    private boolean taskPriority = false;
-    private boolean repeat = false;
+    private String taskPriority ;
+    private String repeat;
 }
